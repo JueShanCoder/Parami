@@ -1,13 +1,11 @@
-# Sample Hardhat Project
+## Mock DOT 代币实现流程
 
-This project demonstrates a basic Hardhat use case. It comes with a sample contract, a test for that contract, and a script that deploys that contract.
+### 质押：DOT 持有者通过质押 DOT 代币，实现 POS 挖矿。
 
-Try running some of the following tasks:
+### 发起提案：任何 DOT 代币持有者在支付手续费后都可以发起社区治理投票。
 
-```shell
-npx hardhat help
-npx hardhat test
-REPORT_GAS=true npx hardhat test
-npx hardhat node
-npx hardhat run scripts/deploy.ts
-```
+### 投票：DOT 代币持有者在提案投票期以正比的 DOT 代币参与投票，在投票期，投票的 DOT 代币会一直锁定。
+
+### 提案是否通过：投票期结束后，根据投票结果（支持和反对票的权重比例）判断提案是否通过。通过与否，参与者可以解锁投票的 DOT 代币。
+
+### 执行提案：按照 FIFO 的顺序执行提案。
